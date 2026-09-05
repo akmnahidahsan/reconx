@@ -254,29 +254,12 @@ Keep recon simple, organized and repeatable.
 
 ## 📜 License
 
-ReconX is released under the **ReconX — Limited Use License**.
+ReconX is licensed under the MIT License.
 
-You are free to:
+You are free to use, modify, distribute, and build upon this project,
+subject to the terms of the license.
 
-- 📖 Read and study ReconX
-- 🎓 Use it for learning and educational purposes
-- 🔬 Use the concepts for research
-- 🛡️ Apply the knowledge in authorized security testing
-- 💡 Build your own independent implementations based on what you learn
+See the [LICENSE](./LICENSE) file for details.
 
-However, you may **not** copy, mirror, republish, redistribute, or upload
-the ReconX repository or substantial portions of its original materials
-to another public repository without prior written permission.
+© 2026 Akm Nahid Ahsan
 
-If you reference ReconX publicly, please give proper credit and link back
-to the official repository.
-
-> **Note:** Learning from ReconX and creating your own implementation is
-> allowed. Republishing ReconX itself, or substantial portions of its
-> original content, is not allowed without permission.
-
-For complete terms, see the [`LICENSE`](./LICENSE) file.
-
----
-
-© 2026 Akm Nahid Ahsan. All Rights Reserved.
