@@ -1,6 +1,4 @@
-
-
-## 🛰️ ReconX
+# 🛰️ ReconX
 
 ### Simple • Sequential • Beginner-Friendly Web Recon Guide
 
@@ -65,174 +63,194 @@ ReconX is a clean, step-by-step reconnaissance guide for **authorized security t
                        │
                        ▼
                     REPORT
+```
 
+---
 
+# 📚 Phases
 
-                    📚 Phases
-⚙️ Phase 0 — Setup
+## ⚙️ Phase 0 — Setup
 
 Prepare your basic environment before starting recon.
 
-→ Open Phase 0
+**[→ Open Phase 0](phases/00-setup.md)**
 
-🔍 Phase 1 — Passive Recon & OSINT
+---
+
+## 🔍 Phase 1 — Passive Recon & OSINT
 
 Collect publicly available information about the target.
 
-Tools covered:
+**Tools covered:**
+- Censys
+- Shodan
+- DNSDumpster
+- WHOIS
+- ViewDNS
 
-Censys
-Shodan
-DNSDumpster
-WHOIS
-ViewDNS
+**[→ Open Phase 1](phases/01-passive-recon.md)**
 
-→ Open Phase 1
+---
 
-🌐 Phase 2 — Subdomain Enumeration
+## 🌐 Phase 2 — Subdomain Enumeration
 
 Find subdomains and validate the discovered names.
 
-Tools covered:
+**Tools covered:**
+- Subfinder
+- Amass
+- dnsx
+- PureDNS
 
-Subfinder
-Amass
-dnsx
-PureDNS
+**[→ Open Phase 2](phases/02-subdomain-enumeration.md)**
 
-→ Open Phase 2
+---
 
-✅ Phase 3 — HTTP Probing
+## ✅ Phase 3 — HTTP Probing
 
 Find which discovered hosts have reachable web services.
 
-Tools covered:
+**Tools covered:**
+- httpx
+- Gowitness
 
-httpx
-Gowitness
+**[→ Open Phase 3](phases/03-http-probing.md)**
 
-→ Open Phase 3
+---
 
-🧩 Phase 4 — Technology Fingerprinting
+## 🧩 Phase 4 — Technology Fingerprinting
 
 Understand what technologies the web application is using.
 
-Tools covered:
+**Tools covered:**
+- Wappalyzer
+- WhatWeb
+- BuiltWith
 
-Wappalyzer
-WhatWeb
-BuiltWith
+**[→ Open Phase 4](phases/04-technology.md)**
 
-→ Open Phase 4
+---
 
-📂 Phase 5 — Content & Directory Discovery
+## 📂 Phase 5 — Content & Directory Discovery
 
 Discover publicly reachable directories, files and paths.
 
-Tools covered:
+**Tools covered:**
+- ffuf
+- Feroxbuster
+- Dirsearch
 
-ffuf
-Feroxbuster
-Dirsearch
+**[→ Open Phase 5](phases/05-content-discovery.md)**
 
-→ Open Phase 5
+---
 
-🔗 Phase 6 — URL & Endpoint Discovery
+## 🔗 Phase 6 — URL & Endpoint Discovery
 
 Build a larger list of known URLs and application endpoints.
 
-Tools covered:
+**Tools covered:**
+- Katana
+- GAU
+- Waybackurls
+- Hakrawler
 
-Katana
-GAU
-Waybackurls
-Hakrawler
+**[→ Open Phase 6](phases/06-url-endpoints.md)**
 
-→ Open Phase 6
+---
 
-📜 Phase 7 — JavaScript Analysis
+## 📜 Phase 7 — JavaScript Analysis
 
 Review JavaScript files for useful application information.
 
-Tools covered:
+**Tools covered:**
+- SecretFinder
+- JSluice
 
-SecretFinder
-JSluice
+**[→ Open Phase 7](phases/07-javascript.md)**
 
-→ Open Phase 7
+---
 
-🎯 Phase 8 — Parameter Discovery
+## 🎯 Phase 8 — Parameter Discovery
 
 Find parameters used by web applications.
 
-Tools covered:
+**Tools covered:**
+- Arjun
+- ParamSpider
 
-Arjun
-ParamSpider
+**[→ Open Phase 8](phases/08-parameters.md)**
 
-→ Open Phase 8
+---
 
-🛡️ Phase 9 — Vulnerability Scanning
+## 🛡️ Phase 9 — Vulnerability Scanning
 
 Use your recon results to guide authorized security testing.
 
-Tools covered:
+**Tools covered:**
+- Nuclei
+- Nmap
+- SQLMap / Ghauri
+- Dalfox
 
-Nuclei
-Nmap
-SQLMap / Ghauri
-Dalfox
+**[→ Open Phase 9](phases/09-vulnerability-scanning.md)**
 
-→ Open Phase 9
+---
 
-📚 Resources
+# 📚 Resources
 
 Useful wordlists and supporting resources.
 
-→ Open Resources
+**[→ Open Resources](resources/README.md)**
 
-🧠 How to Use ReconX
+---
+
+# 🧠 How to Use ReconX
 
 Don't try to learn every tool at once.
 
-For each phase:
-
-1. Read the goal
-       ↓
-2. Understand why the phase exists
-       ↓
-3. Learn the tools
-       ↓
-4. Run them only in an authorized scope
-       ↓
-5. Understand the output
-       ↓
-6. Move to the next phase
+```text
+Read the goal
+     ↓
+Understand why
+     ↓
+Learn the tools
+     ↓
+Run within authorized scope
+     ↓
+Understand the output
+     ↓
+Move to the next phase
+```
 
 The important thing is not memorizing commands.
 
-Understand what you are looking for and why.
+**Understand what you are looking for and why.**
 
-⚠️ Legal & Ethical Use
+---
 
-ReconX is intended for authorized security testing and educational use.
+# ⚠️ Legal & Ethical Use
+
+ReconX is intended for **authorized security testing and educational use**.
 
 Only test:
 
-Systems you own
-CTF/lab environments
-Bug-bounty targets that are explicitly in scope
-Systems where you have permission
+- Systems you own
+- CTF/lab environments
+- Bug-bounty targets that are explicitly in scope
+- Systems where you have permission
 
 Always verify the target's scope and rules before running tools.
 
-⭐ ReconX Philosophy
+---
 
-Discover → Verify → Understand → Review → Report
+# ⭐ ReconX Philosophy
+
+> **Discover → Verify → Understand → Review → Report**
 
 Keep recon simple, organized and repeatable.
 
-📜 License
+---
+
+## 📜 License
 
 MIT License
-"""
