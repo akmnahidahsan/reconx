@@ -1,79 +1,66 @@
-# ⚙️ Phase 0 — Setup
+# 📄 Phase 0 — Prerequisites (First-Time Setup)
 
-> **Goal:** Get your basic environment ready before starting reconnaissance.
+### কেন দরকার?
 
-## 🧠 Why Start Here?
+ReconX-এর অনেকগুলো reconnaissance tool Go-based, আর কিছু tool Python ও অন্যান্য common command-line dependencies ব্যবহার করে।  
+তাই প্রথমবার কাজ শুরু করার আগে basic environment setup করে নেওয়া দরকার।
 
-Before doing recon, make sure your system has the basic tools required.
+একবার এগুলো properly setup করা হলে পরবর্তী phase-গুলোর প্রয়োজনীয় tool সহজেই install ও use করা যাবে।
 
-## 💻 Recommended Environment
+---
 
-- Linux / Kali Linux
-- Git
-- Python 3
-- Go
-- curl
-- wget
+### 🔧 Install Go (Linux/Kali)
 
-## 🔧 Step 1 — Update Your System
+Go-based toolগুলো install এবং run করার জন্য Go প্রয়োজন।
 
 ```bash
-sudo apt update
-```
+# Update packages
+sudo apt update && sudo apt upgrade -y
 
-## 🔧 Step 2 — Install Basic Tools
+# Install Go
+sudo apt install golang-go -y
 
-```bash
-sudo apt install git curl wget python3 golang-go -y
-```
-
-## 🔎 Step 3 — Check Everything
-
-```bash
-git --version
-python3 --version
+# Verify installation
 go version
+
+# Add Go bin to PATH
+export PATH=$PATH:$(go env GOPATH)/bin
+
+# Reload shell
+source ~/.bashrc
+
+```
+</br>
+
+## 🔧 Install Common Dependencies
+
+Recon workflow-এর বিভিন্ন tool install ও ব্যবহার করার জন্য কিছু common dependency আগে থেকেই থাকা ভালো।
+
+```bash
+# Python and pip (for Python-based tools)
+sudo apt install python3 python3-pip pipx -y
+
+# Git (for cloning repositories)
+sudo apt install git -y
+
+# curl and wget
+sudo apt install curl wget -y
+
+```
+</br>
+
+## 🔎 Quick Verification
+সবকিছু ঠিকভাবে install হয়েছে কিনা check করতে:
+```bash
+go version
+python3 --version
+git --version
 curl --version
 wget --version
+
 ```
 
-If the commands return version information, your basic environment is ready.
-
-## 🛠️ Step 4 — Prepare Go Tools
-
-Many modern reconnaissance tools are distributed through Go.
-
-```bash
-export PATH="$PATH:$(go env GOPATH)/bin"
-```
-
-## 📁 Step 5 — Create a Workspace
-
-```bash
-mkdir -p ~/recon
-cd ~/recon
-```
-
-Example:
-
-```text
-recon/
-├── targets/
-├── results/
-└── notes/
-```
-
-## ⚠️ Step 6 — Confirm Your Scope
-
-Before running any recon tool:
-
-- [ ] I own the target
-- [ ] OR I have explicit permission
-- [ ] OR the target is an authorized CTF/lab
-- [ ] OR the target is explicitly in a bug-bounty scope
-- [ ] I understand the allowed testing methods
-
-**Never skip this step.**
+>**💡Note:** Kali Linux-এর recent versions-এ কিছু package আগে থেকেই installed থাকতে পারে। তাই কোনো dependency already installed থাকলে আবার install করার প্রয়োজন নেই।
 
 ## ✅ Phase 0 Checklist
 
