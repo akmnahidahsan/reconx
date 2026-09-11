@@ -27,8 +27,18 @@ Search: ip:1.2.3.4 — specific IP এর info
 
 ```
 
-### 2. Shodan
+### 2. Shodan — Search engine for IoT & servers
 **Use for:** Publicly indexed services, ports and banners.
+### Link : https://www.shodan.io/
+### Usage
+
+```
+Site: shodan.io
+Search: hostname:"target.com" — সব subdomains + ports
+Search: org:"Company Name" — company এর সব IP
+Search: ssl:"target.com" — SSL certificate দিয়ে সার্চ
+
+```
 
 ### 3. DNSDumpster
 **Use for:** DNS information and possible subdomains.
