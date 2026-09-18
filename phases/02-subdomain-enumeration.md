@@ -2,18 +2,31 @@
 
 > **Goal:** Find as many relevant subdomains as possible.
 
-## 🧠 What is a Subdomain?
+## কেন করবো?
 
-Example:
+Main domain এর বাইরে dev, staging, api, admin, mail — এরকম subdomains থাকতে পারে যেগুলো vulnerable। যত বেশি subdomain পাবে, তত বেশি attack surface।
 
-```text
-example.com
-api.example.com
-admin.example.com
-dev.example.com
+Part A — Passive Subdomain Discovery (Subfinder)
+
+### Subfinder — Industry Standard Passive Subdomain Finder
+
+**কী কাজ করে:** 50+ passive sources (Shodan, Censys, VirusTotal, SecurityTrails ইত্যাদি) থেকে subdomains বের করে।
+Target এ কোনো request যায় না।
+
+**GitHub:** https://github.com/projectdiscovery/subfinder
+
+### **Installation**
+
 ```
 
-`api`, `admin`, and `dev` are subdomains.
+# Method 1: Go install
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+# Verify
+subfinder -version
+
+```
+
 
 ## 🛠️ Tools
 
