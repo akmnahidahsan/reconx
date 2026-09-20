@@ -101,7 +101,12 @@ subfinder -ls
 | BeVigil | 25-50 credits/month | https://bevigil.com/ | Dashboard → API Keys | Email দিয়ে signup করো |
 | BuiltWith | Limited | [builtwith.com/signup](https://builtwith.com/signup) | https://api.builtwith.com/ | Tempmail use করবে না |
 | Censys | 250 queries/month | https://search.censys.io/ | Account → API | Format: ```API_ID:SECRET``` |
-
+| CertSpotter | Free CT queries | https://sslmate.com/signup | Account → API Keys | Full Access select করো | 
+| Chaos | Free | https://cloud.projectdiscovery.io/ | Settings → API Key | ProjectDiscovery account | 
+| FullHunt | 100 queries/month | https://fullhunt.io/signup | User Settings | —  |
+| GitHub | Free (rate limited) | https://github.com/settings/tokens | Settings → Developer Settings → PAT | Read-only scope select করো |
+| Intelx | Free tier | https://intelx.io/signup | Account → Developer | Format: ```2.intelx.io:API_KEY``` |
+| RedHunt Labs | Free community | https://devportal.redhuntlabs.com/ | API Keys section | Format দেখো config file এ | 
 
 </details>
 
