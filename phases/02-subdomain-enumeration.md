@@ -107,6 +107,12 @@ subfinder -ls
 | GitHub | Free (rate limited) | https://github.com/settings/tokens | Settings → Developer Settings → PAT | Read-only scope select করো |
 | Intelx | Free tier | https://intelx.io/signup | Account → Developer | Format: ```2.intelx.io:API_KEY``` |
 | RedHunt Labs | Free community | https://devportal.redhuntlabs.com/ | API Keys section | Format দেখো config file এ | 
+| SecurityTrails | 50 credits/month | https://securitytrails.com/app/signup | Account → Credentials | Work/real email দিয়ে signup করো | 
+| Shodan | Basic free | https://account.shodan.io/register | http://account.shodan.io | — | 
+| VirusTotal | 500 req/day | https://www.virustotal.com/gui/join-us | Profile → API Key | — | 
+| WhoisXMLAPI | 500 queries | https://main.whoisxmlapi.com/signup | Dashboard | — | 
+| ZoomEye | 10k credits/month | https://www.zoomeye.org/profile | User Profile | Register & verify email | 
+| AlienVault OTX | Unlimited & Free | https://otx.alienvault.com/ | API Settings | সবচেয়ে ভালো free option |
 
 </details>
 
