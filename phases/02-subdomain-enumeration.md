@@ -126,7 +126,7 @@ subfinder -ls
 
 
 
-
+<!--
 
 ## 📌 Simple Workflow
 
@@ -147,6 +147,8 @@ Valid DNS names
 Finding a subdomain does **not** mean it is a live website.
 
 That is why we verify the results in the next phase.
+
+-->
 
 ## ✅ Checklist
 
