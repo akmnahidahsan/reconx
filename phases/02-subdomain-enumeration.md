@@ -9,7 +9,7 @@ Main domain এর বাইরে dev, staging, api, admin, mail — এরক�
 
 <details>
 
-<summary> Part A — Passive Subdomain Discovery (Subfinder) </summary>
+<summary> 📡 Part A — Passive Subdomain Discovery (Subfinder) </summary>
 
 ### Subfinder — Industry Standard Passive Subdomain Finder
 
@@ -21,7 +21,7 @@ Target এ কোনো request যায় না।
 
 ### **Installation**
 
-```
+```bash
 
 # Method 1: Go install
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
@@ -45,7 +45,7 @@ nano ~/.config/subfinder/provider-config.yaml
 
 ```
 
-```
+```bash
 # ~/.config/subfinder/provider-config.yaml
 # শুধু যেগুলোর key আছে সেগুলো fill করো, বাকিগুলো [] রাখো
 bevigil: [YOUR_BEVIGIL_KEY]
@@ -68,7 +68,7 @@ zoomeyeapi: [YOUR_ZOOMEYE_KEY]
 
 ## Usage Commands
 
-```
+```bash
 
 # Basic scan
 subfinder -d target.com
@@ -117,8 +117,143 @@ subfinder -ls
 </details>
 
 
+<!--part B--><!--part B-->
+
+<details>
+
+<summary> 🔨 Part B — Active Subdomain Discovery (DNS Brute Force) </summary>
+
+## কেন করবো? 
+
+Passive sources এ যেসব subdomains নেই, সেগুলো wordlist দিয়ে bruteforce করে বের করা। এটা active scan তাই target এ request যাবে।
+
+<details>
+
+<summary> dnsx — Fast DNS Resolver & Validator </summary> <br>
 
 
+**কী কাজ করে:** Passive tools থেকে পাওয়া subdomain list resolve করে verify করে কোনগুলো actually exist করে। CDN, ASN info ও দেয়।
+
+**GitHub:** https://github.com/projectdiscovery/dnsx
+
+```bash
+
+# Installation
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+
+# Verify
+dnsx -version
+
+```
+
+```bash
+
+# Subfinder output resolve করো
+subfinder -d target.com -silent | dnsx -silent
+
+# File থেকে resolve
+dnsx -l subdomains.txt
+
+# All DNS records দেখো
+dnsx -l subdomains.txt -recon
+
+# CDN এবং ASN info সহ
+dnsx -l subdomains.txt -cdn -asn
+
+# Custom resolvers use করো (faster)
+dnsx -l subdomains.txt -r 1.1.1.1,8.8.8.8
+
+# JSON output
+dnsx -l subdomains.txt -json -o dns_results.json
+
+# Wordlist দিয়ে brute force
+dnsx -d target.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt
+
+```
+
+</details>
+
+<details>
+   <summary> Amass — In-depth Network Mapping Tool </summary> <br> 
+
+   **কী কাজ করে:** Passive + active enumeration দুটোই করে। Certificate transparency, DNS brute force, API integrations সব কিছু। Subfinder এর চেয়ে আস্তে কিন্তু বেশি thorough।
+
+**GitHub:** https://github.com/owasp-amass/amass
+
+```bash
+
+# Installation
+go install -v github.com/owasp-amass/amass/v4/...@latest
+
+# Verify
+amass version
+
+```
+
+```bash
+
+# Passive only (safe, no direct contact)
+amass enum -passive -d target.com
+
+# Active + passive
+amass enum -d target.com
+
+# Save to file
+amass enum -d target.com -o amass_subdomains.txt
+
+# Intelligence gathering (OSINT)
+amass intel -whois -d target.com
+
+```
+   
+</details>
+
+<details>
+   <summary> Puredns — DNS Bruteforce with Mass Resolver </summary> <br>
+
+   **কী কাজ করে:** Massdns ব্যবহার করে high-speed DNS bruteforce করে। লক্ষ লক্ষ subdomains কয়েক মিনিটে check করতে পারে।
+
+**GitHub:** https://github.com/d3mondev/puredns
+
+```bash
+
+# Step 1: Massdns install করো (dependency)
+git clone https://github.com/blechschmidt/massdns.git
+cd massdns
+make
+sudo make install
+cd ..
+
+# Step 2: Puredns install করো
+go install github.com/d3mondev/puredns/v2@latest
+
+# Step 3: Resolvers setup করো
+mkdir -p ~/.config/puredns
+# Public resolvers list download করো
+curl -s https://raw.githubusercontent.com/trickest/resolvers/main/resolvers.txt -o ~/.config/puredns/resolvers.txt
+
+```
+
+```bash
+
+# Wordlist দিয়ে bruteforce
+puredns bruteforce /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt target.com
+
+# Resolve existing list
+puredns resolve subdomains.txt
+
+# Output save করো
+puredns bruteforce wordlist.txt target.com -r ~/.config/puredns/resolvers.txt -w valid_subdomains.txt
+
+```
+</details>
+
+
+
+
+
+
+</details>
 
 
 
