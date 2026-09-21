@@ -264,9 +264,10 @@ puredns bruteforce wordlist.txt target.com -r ~/.config/puredns/resolvers.txt -w
 
 
 > [!TIP]
->  **New here?**
-> Part A & Part B are **clickable sections**.
-> Click **▶ Part A** or **▶ Part B** above to explore the detailed tools, commands, and workflow.
+> **New here?** Part A & Part B are **clickable sections**.
+> Click the ▶ arrow beside **Part A** or **Part B** to explore the detailed workflow.
+>
+> Inside **Part B**, `dnsx`, `Amass`, and `Puredns` are also **clickable** — expand them to view their detailed setup, commands, and usage.
 
 
 
@@ -296,6 +297,8 @@ That is why we verify the results in the next phase.
 
 <br>
 
+<!--
+
 ## ✅ Checklist
 
 - [ ] Run Subfinder
@@ -303,5 +306,7 @@ That is why we verify the results in the next phase.
 - [ ] Remove duplicates
 - [ ] Resolve discovered names
 - [ ] Save valid results
+
+-->
 
 ➡️ **Next: [Phase 3 — HTTP Probing](03-http-probing.md)**
