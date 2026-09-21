@@ -114,6 +114,13 @@ subfinder -ls
 | ZoomEye | 10k credits/month | https://www.zoomeye.org/profile | User Profile | Register & verify email | 
 | AlienVault OTX | Unlimited & Free | https://otx.alienvault.com/ | API Settings | সবচেয়ে ভালো free option |
 
+
+<br>
+
+---
+---
+
+
 </details>
 
 
@@ -253,11 +260,13 @@ puredns bruteforce wordlist.txt target.com -r ~/.config/puredns/resolvers.txt -w
 
 
 
-</details>
+</details> <br> 
 
 
-
-
+> [!TIP]
+>  **New here?**
+> Part A & Part B are **clickable sections**.
+> Click **▶ Part A** or **▶ Part B** above to explore the detailed tools, commands, and workflow.
 
 
 
@@ -284,6 +293,8 @@ Finding a subdomain does **not** mean it is a live website.
 That is why we verify the results in the next phase.
 
 -->
+
+<br>
 
 ## ✅ Checklist
 
