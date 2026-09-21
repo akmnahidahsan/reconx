@@ -97,7 +97,7 @@ subfinder -ls
 
 | Provider | Free Limit | Sign Up | API Key Location | Notes
 |---|---|---|---|---|
-| :--- | :--- | :--- | :--- | :--- |
+|---|---|---|---|---|
 | BeVigil | 25-50 credits/month | https://bevigil.com/ | Dashboard → API Keys | Email দিয়ে signup করো |
 | BuiltWith | Limited | [builtwith.com/signup](https://builtwith.com/signup) | https://api.builtwith.com/ | Tempmail use করবে না |
 | Censys | 250 queries/month | https://search.censys.io/ | Account → API | Format: ```API_ID:SECRET``` |
