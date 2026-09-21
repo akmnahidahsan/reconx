@@ -108,6 +108,12 @@ IP History → Domain-এর আগের IP গুলো (origin IP বের �
 
 <br>
 
+> [!TIP]
+> **New here?** All tools above are **clickable**.
+> Click the ▶ arrow beside **Censys**, **Shodan**, **DNSDumpster**, **Whois**, or **ViewDNS** to explore the detailed documentation.
+
+<br>
+
 ## 📌 Simple Workflow
 
 ```
