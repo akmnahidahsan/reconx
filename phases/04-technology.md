@@ -1,44 +1,73 @@
-# 🧩 Phase 4 — Technology Fingerprinting
+# 🧩 Phase 4 — Technology Fingerprinting (Target কোন tech use করছে?)
 
-> **Goal:** Understand what technologies the web application uses.
+### কেন করবো?
 
-## 🧠 Why?
+Target কোন framework, CMS, server, JS library use করছে জানলে সেই specific technology এর vulnerabilities খোঁজা যায়। WordPress? → WordPress-specific bugs খোঁজো।
 
-Knowing the technology helps you understand the application.
+<details>
 
-For example:
+   <summary> Wappalyzer — Browser Extension (Easiest) </summary> <br>
 
-```text
-Web Server
-Framework
-CMS
-JavaScript libraries
-CDN
-Programming language
+   **কী কাজ করে:** Browser extension হিসেবে install করলে যেকোনো website visit করলে সাথে সাথে tech stack দেখায়।
+
+**Install:** Chrome/Firefox এ "Wappalyzer" extension install করো
+
+**Link:** https://www.wappalyzer.com/
+
+
+</details> 
+
+<details>
+
+   <summary> WhatWeb — Command Line Tech Fingerprinter </summary> <br>
+
+   **কী কাজ করে:** Website এর server headers, HTML, cookies analyze করে technology বের করে।
+
+**GitHub:** https://github.com/urbanadventurer/whatweb
+
+```bash
+
+# Installation
+sudo apt install whatweb
+
+# Basic scan
+whatweb https://target.com
+
+# Verbose output
+whatweb -v https://target.com
+
+# Multiple targets
+whatweb -i live_hosts.txt --log-brief=results.txt
+
+# Aggression level (1-4, বেশি = বেশি request)
+whatweb -a 3 https://target.com
+
 ```
+</details>
 
-## 🛠️ Tools
+<details>
 
-### 1. Wappalyzer
-**Use for:** Quick technology identification.
+   <summary> BuiltWith — Business Tech Stack Identifier </summary> <br> 
 
-### 2. WhatWeb
-**Use for:** CLI-based technology fingerprinting.
+   **কী কাজ করে:** Website এর technology stack history সহ দেখায়। আগে কী use করতো এখন কী করছে।
 
-### 3. BuiltWith
-**Use for:** Technology-stack and historical information.
+**Link:** https://builtwith.com/
 
-## 📌 Simple Workflow
+   
+</details> <br>
 
-```text
-Live Host
-   ↓
-Technology Detection
-   ↓
-Framework / CMS / Server
-   ↓
-Record findings
-```
+> [!TIP]
+> **New here?** Click ▶ **Wappalyzer** , ▶ **WhatWeb**, ▶ **BuiltWith** to explore the detailed documentation.
+
+<br>
+
+
+
+
+
+
+
+<!--
 
 ## ⚠️ Important
 
@@ -52,5 +81,7 @@ It is information that helps you decide what to investigate next.
 - [ ] Identify framework/CMS
 - [ ] Note interesting technologies
 - [ ] Record versions when reliably exposed
+
+-->
 
 ➡️ **Next: [Phase 5 — Content Discovery](05-content-discovery.md)**
