@@ -155,7 +155,7 @@ dirsearch -u https://target.com -o results.txt
 </details> <br>
 
 > [!TIP]
-> **New here?** Click ▶ **ffuf** , ▶ **Feroxbuster **, ▶ **dirsearch ** to explore the detailed documentation.
+> **New here?** Click ▶ **ffuf** , ▶ **Feroxbuster**, ▶ **dirsearch** to explore the detailed documentation.
 
 <br>
 
