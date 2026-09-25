@@ -1,26 +1,20 @@
-# 🔗 Phase 6 — URL & Endpoint Discovery
+# 🔗 Phase 6 — URL & Endpoint Discovery (সব URLs collect করো)
 
-> **Goal:** Build a larger list of known URLs and endpoints.
+### কেন করবো?
 
-## 🧠 Why?
+Target এর সব known URLs (Wayback Machine, crawling, Google Cache) collect করলে hidden endpoints, deprecated APIs, old admin paths পাওয়া যায়। এগুলো থেকে vulnerability পাওয়ার chance বেশি।
 
-Historical URLs and crawled URLs can reveal functionality that is not obvious from the homepage.
 
-## 🛠️ Tools
 
-### 1. Katana
-**Use for:** Web crawling and endpoint discovery.
 
-### 2. GAU
-**Use for:** Collecting URLs from public/historical sources.
 
-### 3. Waybackurls
-**Use for:** Finding archived URLs.
 
-### 4. Hakrawler
-**Use for:** Simple link and endpoint crawling.
 
-## 📌 Simple Workflow
+
+
+
+
+
 
 ```text
 Historical Sources
