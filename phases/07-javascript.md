@@ -73,7 +73,7 @@ cat cleaned_urls.txt | grep "\.js$" | xargs -I@ curl -s @ | jsluice urls
 
 
 > [!TIP]
-> **New here?** Click ▶ **SecretFinder** or ▶ **jsluice** to explore the detailed documentation.
+> **New here?** Click ▶ **SecretFinder** , ▶ **jsluice** to explore the detailed documentation.
 
 <br>
 
