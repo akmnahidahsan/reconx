@@ -23,47 +23,7 @@ ReconX is a clean, step-by-step reconnaissance guide for **authorized security t
 | 🎯 **Phase 8** | Parameter Discovery | Parameters and inputs |
 | 🛡️ **Phase 9** | Vulnerability Scanning | Security issues to review |
 | 📚 **Resources** | Wordlists & Resources | Helpful resources |
-
----
-
-## 🔄 The Whole Process
-
-```text
-                    TARGET
-                       │
-                       ▼
-              ⚙️ PHASE 0 — SETUP
-                       │
-                       ▼
-          🔍 PHASE 1 — PASSIVE RECON
-                       │
-                       ▼
-       🌐 PHASE 2 — SUBDOMAIN ENUMERATION
-                       │
-                       ▼
-            ✅ PHASE 3 — HTTP PROBING
-                       │
-                       ▼
-       🧩 PHASE 4 — TECHNOLOGY FINGERPRINT
-                       │
-                       ▼
-        📂 PHASE 5 — CONTENT DISCOVERY
-                       │
-                       ▼
-       🔗 PHASE 6 — URL & ENDPOINTS
-                       │
-                       ▼
-          📜 PHASE 7 — JAVASCRIPT
-                       │
-                       ▼
-          🎯 PHASE 8 — PARAMETERS
-                       │
-                       ▼
-       🛡️ PHASE 9 — SECURITY REVIEW
-                       │
-                       ▼
-                    REPORT
-```
+| 🔄 **Quick Reference** | Full Recon Pipeline | --- |
 
 ---
 
@@ -243,13 +203,6 @@ Always verify the target's scope and rules before running tools.
 
 ---
 
-# ⭐ ReconX Philosophy
-
-> **Discover → Verify → Understand → Review → Report**
-
-Keep recon simple, organized and repeatable.
-
----
 
 
 ## 📜 License
