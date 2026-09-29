@@ -1,54 +1,40 @@
-# 📚 Resources
+# 📚  Essential Wordlists & Resources
+<br>
 
-## 🔤 Wordlists
 
-### SecLists
-A large collection of wordlists useful for many security-testing tasks.
+## SecLists — The Ultimate Wordlist Collection
+**কী আছে:** Usernames, passwords, URLs, directories, subdomains, fuzzing payloads — সব ধরনের wordlist এক জায়গায়।
 
-GitHub: https://github.com/danielmiessler/SecLists
+**GitHub:** https://github.com/danielmiessler/SecLists
 
-Useful areas include:
+```bash
 
-```text
-Discovery/
-Fuzzing/
-Passwords/
-Usernames/
+# Installation
+sudo apt install seclists
+
+# OR manually
+git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
+
 ```
 
-## 📦 Payload Resources
+**Useful paths:**
 
-### PayloadBox
-A collection of security-testing payload resources.
-
-GitHub: https://github.com/payloadbox
-
----
-
-## 🧠 How to Learn Recon
-
-Don't memorize tools.
-
-Instead, understand the question each phase is asking:
-
-```text
-What is public?
-      ↓
-What subdomains exist?
-      ↓
-Which hosts are alive?
-      ↓
-What technologies are used?
-      ↓
-What paths exist?
-      ↓
-What URLs/endpoints exist?
-      ↓
-What does JavaScript reveal?
-      ↓
-What parameters exist?
-      ↓
-What should be tested?
+```bash
+/usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt  → Directory brute force
+/usr/share/seclists/Discovery/Web-Content/raft-medium-words.txt          → Better directory list
+/usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt       → Subdomain brute force
+/usr/share/seclists/Fuzzing/                                             → XSS, SQLi payloads
 ```
 
-That is the core idea behind ReconX.
+
+### 📦 PayloadBox — Vulnerability Specific Payloads
+
+**Link:** https://github.com/payloadbox
+
+### Additional Resources
+
+- Web Recon Guide: https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/
+- Recon Methodology: https://github.com/pr0xh4ck/web-recon
+
+
+
