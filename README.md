@@ -164,6 +164,62 @@ Useful wordlists and supporting resources.
 
 ---
 
+# 🔄 Quick Reference — Full Recon Pipeline
+
+## Complete Automated Pipeline
+
+```bash
+
+#!/bin/bash
+# Full Web App Recon Pipeline
+# Usage: ./recon.sh target.com
+
+TARGET=$1
+OUTDIR="recon_$TARGET"
+mkdir -p $OUTDIR
+
+echo "[*] Starting recon on $TARGET"
+
+# Phase 1: Subdomain Enumeration
+echo "[*] Finding subdomains..."
+subfinder -d $TARGET -all -silent -o $OUTDIR/subdomains.txt
+
+# Phase 2: DNS Validation
+echo "[*] Resolving subdomains..."
+dnsx -l $OUTDIR/subdomains.txt -silent -o $OUTDIR/resolved.txt
+
+# Phase 3: HTTP Probing
+echo "[*] Finding live hosts..."
+httpx -l $OUTDIR/resolved.txt -title -status-code -tech-detect -silent -o $OUTDIR/live_hosts.txt
+
+# Phase 4: URL Collection
+echo "[*] Collecting URLs..."
+gau $TARGET > $OUTDIR/gau_urls.txt
+echo $TARGET | waybackurls >> $OUTDIR/gau_urls.txt
+katana -u https://$TARGET -jc -silent >> $OUTDIR/gau_urls.txt
+cat $OUTDIR/gau_urls.txt | sort -u > $OUTDIR/all_urls.txt
+
+# Phase 5: Vulnerability Scanning
+echo "[*] Running Nuclei..."
+nuclei -l $OUTDIR/live_hosts.txt -tags cve,misconfig -severity critical,high -o $OUTDIR/nuclei_results.txt
+
+echo "[+] Recon complete! Results in $OUTDIR/"
+ls -la $OUTDIR/
+
+```
+
+## One-liner Quick Scan 
+
+```bash
+
+# Quick subdomain → live hosts pipeline
+subfinder -d target.com -silent | dnsx -silent | httpx -title -status-code -tech-detect
+
+# Quick vulnerability check
+subfinder -d target.com -silent | httpx -silent | nuclei -tags cve -severity critical,high
+
+```
+
 # 🧠 How to Use ReconX
 
 Don't try to learn every tool at once.
